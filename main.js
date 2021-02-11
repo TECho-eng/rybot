@@ -34,7 +34,283 @@ global.timestamp = {
 }
 global.LOGGER = logs()
 const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()let { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6283856085455'] // Put your number here
+global.mods = ['6283856085455'] // Want some help?
+global.prems = ['6283856085455'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
 let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/datablet { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6283856085455'] // Put your number here
+global.mods = ['6283856085455'] // Want some help?
+global.prems = ['6283856085455'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'let { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6283856085455'] // Put your number here
+global.mods = ['6283856085455'] // Want some help?
+global.prems = ['6283856085455'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in glolet { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6283856085455'] // Put your number here
+global.mods = ['6283856085455'] // Want some help?
+global.prems = ['6283856085455'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.Alet { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6283856085455'] // Put your number here
+global.mods = ['6283856085455'] // Want some help?
+global.prems = ['6283856085455'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs let { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
+let { generate } = require('qrcode-terminal')
+let qrcode = require('qrcode')
+let simple = require('./lib/simple')
+let logs = require('./lib/logs')
+let yargs = require('yargs/yargs')
+let syntaxerror = require('syntax-error')
+let fetch = require('node-fetch')
+let chalk = require('chalk')
+let fs = require('fs')
+let path = require('path')
+let util = require('util')
+let { spawnSync } = require('child_process')
+let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['917356145338'] // Put your number here
+global.mods = ['917356145338'] // Want some help?
+global.prems = ['917356145338'] // Premium user has unlimited limit
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  nrtm: 'https://nurutomo.herokuapp.com',
+  xteam: 'https://api.xteam.xyz'
+}
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}PIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}bal.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}
+  'https://api.xteam.xyz': 'test'
+}
+
+
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = {
+  start: new Date
+}
+global.LOGGER = logs()
+const PORT = process.env.PORT || 3000
+let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
+global.opts = Object.freeze({...opts})
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
+
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}ase'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
+if (!global.DATABASE.data.users) global.DATABASE.data = {
+  users: {},
+  groups: {},
+  chats: {},
+  stats: {},
+}
 global.opts = Object.freeze({...opts})
 global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ\\/i!#$%\\-+£¢€¥^°=¶∆×÷π√✓©®:;?&.') + ']')
 
